@@ -1,0 +1,5 @@
+{
+  "apiUrl":"http://domain//api",
+  "userName": "testUser",
+  "userKey":"privatekeyofuser"
+}
