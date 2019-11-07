@@ -3,3 +3,9 @@
 <button (click)="clear(); showSettings()">get</button>
 
 {{diagnostic}}
+
+  <ng-container *ngIf="settings">
+    <p>API Url: {{settings.apiUrl}}</p>
+    <p>UserName: {{settings.userName}}</p>
+    <p>UserKey: {{settings.userKey}}</p>
+  </ng-container>

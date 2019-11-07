@@ -22,11 +22,21 @@ export class ConfigFileComponent implements OnInit {
 
   get diagnostic() { return JSON.stringify(this.settings); }
 
+  // showSettings() {
+  //   this.settingsService.getSettingsValue()
+  //     .subscribe(
+  //       (data: Settings) => this.settings = { ...data },         
+  //     );
+  // }
+
   showSettings() {
-    this.settingsService.getSettingsValue()
-      .subscribe(
-        (data: Settings) => this.settings = { ...data },         
-      );
+    //this.settingsService.getSettingsValue()
+    this.settingsService.getSettingsValueType()
+      .subscribe((data: Settings) => this.settings = {
+          apiUrl: data['apiUrl'],
+          userName:  data['userName'],
+          userKey: data['userKey']
+      });
   }
 
 }

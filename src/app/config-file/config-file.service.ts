@@ -20,4 +20,9 @@ export class ConfigFileService {
     return this.http.get(this.url);
   }
 
+  getSettingsValueType() {
+    // now returns an Observable of Config
+    return this.http.get<Settings>(this.url);
+  }
+
 }
